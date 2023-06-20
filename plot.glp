@@ -1,0 +1,31 @@
+set terminal pdf
+set output 'graph.pdf'
+set multiplot
+set size 0.5,0.5
+set origin 0,0.5
+set xrange[-4:4]
+set yrange[-4:4]
+set xlabel 'x'
+set ylabel 'Main Function '
+set xtics -3.14,3.14,3.14
+set ytics -3.14,3.14,3.14
+plot 'main_function.txt' w l notitle
+set size 0.5,0.5
+set origin 0.5,0.5
+set xrange[-4:4]
+set yrange[-4:4]
+set xlabel 'x'
+set ylabel 'Main Furrier'
+set xtics -3.14,3.14,3.14
+set ytics -3.14,3.14,3.14
+plot 'main_furrier.txt' w l notitle
+set size 1,0.5
+set origin 0,0
+set xrange[-4:4]
+set yrange[-2:2]
+set xlabel 'x'
+set ylabel 'Sub Furrier'
+set xtics -3.14,1.57,3.14
+set ytics -2,2,2
+plot for [i=2:8] 'sub_furrier.txt' using 1:i w l notitle
+unset multiplot
