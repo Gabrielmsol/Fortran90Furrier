@@ -1,3 +1,5 @@
+#  Fortran90Furrier
+
 To ensure that the program will work as expected follow:
 * Copy this repository on a dedicated directory;
 * Make sure you have the variables.txt file 
